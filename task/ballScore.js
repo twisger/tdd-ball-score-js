@@ -1,4 +1,4 @@
-export const calculateRoundScore = (scoreList, roundNumber) => {
+export const calculateRoundScore = (scoreList) => {
   if (scoreList[0] === 10) {
     return scoreList.reduce((pre, cur) => pre + cur);
   }
