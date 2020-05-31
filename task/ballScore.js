@@ -9,3 +9,5 @@ export const calculateRoundScore = (scoreList) => {
     return scoreList[0] + scoreList[1];
   }
 };
+
+export const calculateTotalScore = roundScoreList => roundScoreList.reduce((pre, cur) => pre + cur);
