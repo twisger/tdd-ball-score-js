@@ -19,3 +19,7 @@ test('should score be 30 then throw ball given first ball 10, second ball 10, th
 test('should score be 18 then throw ball given first ball 5, second ball 5, third ball 8 in ten round', () => {
   expect(calculateRoundScore([5, 5, 8], 10)).toBe(18);
 });
+
+test('should score be 7 then throw ball given first ball 5, second ball 2 in ten round', () => {
+  expect(calculateRoundScore([5, 2], 10)).toBe(7);
+});
