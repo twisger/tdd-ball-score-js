@@ -20,3 +20,35 @@ test('should score be 8 when throw ball given first ball 5, second ball 3, third
 test('should score be sum value when calculate total score given every round score', () => {
   expect(calculateTotalScore([30, 30, 30, 30, 30, 30, 30, 30, 30, 30])).toBe(300);
 });
+
+test('should score be 100 when calculate total score given number of bottles poured every round and last round not strike or spare', () => {
+  const bottleNumberList = [
+    [10],
+    [4, 6],
+    [3, 2],
+    [5, 5],
+    [2, 3],
+    [5, 4],
+    [10],
+    [3, 2],
+    [5, 2],
+    [5, 4],
+  ];
+  expect(calculateTotalScore(bottleNumberList)).toBe(100);
+});
+
+test('should score be 300 when calculate total score given given number of bottles poured every round and every round strike', () => {
+  const bottleNumberList = [
+    [10],
+    [10],
+    [10],
+    [10],
+    [10],
+    [10],
+    [10],
+    [10],
+    [10],
+    [10, 10, 10],
+  ];
+  expect(calculateTotalScore(bottleNumberList)).toBe(300);
+});
